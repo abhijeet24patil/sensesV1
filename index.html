@@ -44,7 +44,7 @@
                      <span class="icon-bar"></span>
                      </button>
                      <a class="navbar-brand" href="index.html">
-                     <img class="img-responsive1" src="images/logo1a.png" alt="logo" style="top: 30px; width: 90%;">
+                     <img class="img-responsive1" src="images/logo1a.png" alt="logo" style="top: 34%; width: 90%;height:25px;">
                      </a>                    
                   </div>
                   <div class="collapse navbar-collapse">
@@ -858,12 +858,21 @@
       <script type="text/javascript" src="js/jquery.nav.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.js"></script>  
+       
        <script type="text/javascript">
-      $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-});
+            $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
       </script>
+      
+      <script>
+        $(document).on('click','.navbar-collapse.in',function(e) {
+            if( $(e.target).is('a') ) {
+                $(this).collapse('hide');
+            }
+        });
+    </script>
 
    </body>
 </html>
